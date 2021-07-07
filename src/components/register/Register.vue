@@ -3,7 +3,7 @@
     <div class="register__form-wrapper">
       <div class="row">
         <div class="col-12">
-          <h1 class="register__heading">Register</h1>
+          <h1 class="register__heading">Registrierung</h1>
           <form>
             <div class="form-group">
               <!-- username  -->
@@ -138,9 +138,9 @@
             <button
               type="submit"
               @click.prevent="submitForm"
-              class="btn btn-primary float-right"
+              class="btn btn-primary  form-control"
             >
-              Submit
+              Registrieren
             </button>
           </form>
         </div>
@@ -259,8 +259,6 @@ export default {
       const keys = field.split(".");
       return keys.reduce((acc, item) => acc[item], this.v$).$errors[0].$message;
     },
-
-    
   },
 };
 </script>
@@ -289,15 +287,16 @@ $error-text-color: #dc3545;
   &__form-wrapper {
     background-color: $bg-form-color;
     padding: 20px 30px;
-    width: 50%;
+    width: 40%;
     border-radius: 5px;
     box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.5);
   }
 
   &__heading {
     color: #6610f2;
-    margin-bottom: 5px;
+    margin-bottom: 10px;
     text-align: center;
+    text-transform: uppercase;
   }
 
   &--message {
@@ -305,11 +304,10 @@ $error-text-color: #dc3545;
     font-size: 0.75rem;
   }
 
-
   .form-group {
     margin-bottom: 1rem;
   }
-  
+
   .form-control,
   .btn,
   .form-check-input {
